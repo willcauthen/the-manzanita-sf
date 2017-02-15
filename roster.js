@@ -25,7 +25,7 @@ var house = {
    coffee : function() {
       roster = this.roster;
       var response = {
-         text: "_COFFEE DATES_, @channel",
+         text: "hey guys, time fore _COFFEE DATES_!",
          attachments: [
            {text: roster[0] + " and " + roster[1]},
            {text: roster[2] + " and " + roster[3]},
