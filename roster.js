@@ -26,6 +26,7 @@ var house = {
       house.shuffle();
       roster = this.roster;
       var response = {
+         "response_type": "in_channel",
          text: "hey guys, time fore _COFFEE DATES_!",
          attachments: [
            {text: roster[0] + " and " + roster[1]},
