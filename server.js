@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
   res.json({msg: "Hello World!"});
 });
 
-app.get('/coffee', function(rew, res) {
+app.get('/coffee', function(req, res) {
   request.post(
     hook,
     { json:  house.coffee() }
