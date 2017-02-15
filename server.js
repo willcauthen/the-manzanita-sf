@@ -5,7 +5,7 @@ var express = require('express'),
 
 
 app.get('/', function (req, res) {
-  res.send("Hello World!");
+  res.json({msg: "Hello World!"});
 });
 
 app.get('/coffee', function(rew, res) {
