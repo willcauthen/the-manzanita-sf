@@ -25,6 +25,7 @@ var house = {
    coffee : function() {
       roster = this.roster;
       var res= {};
+      res.title = "_COFFEE DATES_";
       res.first = [roster[0], roster[1]];
       res.second=[roster[2], roster[3]];
       res.third = [roster[4], roster[5]];
@@ -38,4 +39,7 @@ var house = {
 
 exports.getHouse = function() {
   return house;
+};
+
+var output = {
 };
