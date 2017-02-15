@@ -23,6 +23,7 @@ var house = {
       return Math.floor(Math.random() * this.roster.length);
    },
    coffee : function() {
+      house.shuffle();
       roster = this.roster;
       var response = {
          text: "hey guys, time fore _COFFEE DATES_!",

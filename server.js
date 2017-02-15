@@ -16,6 +16,7 @@ app.get('/coffee', function(rew, res) {
     hook,
     { json:  house.coffee() }
   );
+  res.send({msg: "hello"});
 });
 
 app.listen(process.env.PORT || 3000, function(){
