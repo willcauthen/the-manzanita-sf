@@ -13,7 +13,7 @@ app.get('/', function (req, res) {
 
 app.get('/coffee', function(req, res) {
   request({
-    url: hook || 'www.google.com', //<-- remove after debug
+    url: /*hook ||*/ 'www.google.com', //<-- remove after debug
     method: "POST",
     json: true,
     body: house.coffee()
