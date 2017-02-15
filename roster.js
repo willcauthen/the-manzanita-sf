@@ -14,8 +14,8 @@ var house = {
          ],
    shuffle : function(){
       newRoster = [];
-      while (roster.length > 0) {
-         newRoster.push(roster.splice(this.picker(), 1).toString());
+      while (this.roster.length > 0) {
+         newRoster.push(this.roster.splice(this.picker(), 1).toString());
       }
       this.roster = newRoster;
    },
@@ -24,16 +24,19 @@ var house = {
    },
    coffee : function() {
       roster = this.roster;
-      var res= {};
-      res.title = "_COFFEE DATES_";
-      res.first = [roster[0], roster[1]];
-      res.second=[roster[2], roster[3]];
-      res.third = [roster[4], roster[5]];
-      res.fourth=[roster[6], roster[7]];
-      res.fifth=[roster[8], roster[9], roster[10]];
+      var response = {
+         text: "_COFFEE DATES_",
+         attachments: [
+           {text: "Date: " + roster[0] + " and " + roster[1]},
+           {text: "Date: " + roster[2] + " and " + roster[3]},
+           {text: "Date: " + roster[4] + " and " + roster[5]},
+           {text: "Date: " + roster[6] + " and " + roster[7]},
+           {text: "Date: " + roster[8] + ", " + roster[9] + ", and " + roster[10]}
+         ]
+      };
 
       this.shuffle();
-      return (res);
+      return response;
    }
 };
 
