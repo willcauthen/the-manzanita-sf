@@ -13,22 +13,11 @@ app.get('/', function (req, res) {
 
 app.get('/coffee', function(req, res) {
   request({
-    url: hook,
+    url: hook || 'www.google.com', //<-- remove after debug
     method: "POST",
     json: true,
     body: house.coffee()
   });
-  // request.post(
-  //   hook,
-  //   { json:  house.coffee() },
-  //   function(error, response, body) {
-  //   if (error) {
-  //     console.log("Error: ", error);
-  //   } else if (!error && response.status == 200) {
-  //     console.log(body);
-  //   }
-  // }
-  // );
   res.send({msg: "hello"});
 });
 
