@@ -10,7 +10,11 @@ app.get('/', function (req, res) {
 
 app.get('/coffee', function(rew, res) {
 
-  res.json({dates: house.coffee()});
+  res.json({text: "_COFFEE DATES_",
+            attachments: [
+              {text: "Date:" + house.roster[0] + " and " + house.roster[1]}
+            ]
+  });
 });
 
 app.listen(process.env.PORT || 3000, function(){
